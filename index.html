@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#fff8ee">
+	<meta name="description" content="Cuéntanos qué te pareció nuestro servicio y comida. Tu opinión nos ayuda a mejorar.">
+	<title>Tu opinión cuenta | Nombre</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="Css/encuesta.css">
+</head>
+<body>
+	<main class="page-shell">
+		<section class="survey-card" aria-labelledby="survey-title">
+			<header class="hero">
+				<div class="brand-mark" aria-hidden="true">🍋</div>
+				<p class="eyebrow">"Nombre" · COMIDA HECHA CON CARIÑO</p>
+				<h1 id="survey-title">¿Qué tal te fue?</h1>
+				<p class="intro">Nos encanta tenerte por aquí. Regálanos un minuto y cuéntanos cómo estuvo tu experiencia.</p>
+				<div class="time-note"><span aria-hidden="true">✦</span> Solo te tomará 1 minuto</div>
+			</header>
+
+			<form
+				id="survey-form"
+				action="https://formsubmit.co/natalyfabiolaperezmartinez06@gmail.com"
+    			method="POST">
+
+				<input type="hidden" name="_subject" value="Nueva reseña recibida">
+    			<input type="hidden" name="_captcha" value="false">
+    			<input type="hidden" name="_template" value="table">
+				
+				<fieldset class="question-block">
+					<legend><span class="step">01</span> ¿Cómo estuvo nuestro servicio?</legend>
+					<p class="hint">Piensa en la atención y la amabilidad de nuestro equipo.</p>
+					<div class="rating-options" role="radiogroup" aria-label="Califica el servicio">
+						<label class="rating-option"><input type="radio" name="servicio" value="Muy malo" required><span class="rating-emoji">😞</span><span class="rating-label">Muy malo</span></label>
+						<label class="rating-option"><input type="radio" name="servicio" value="Malo"><span class="rating-emoji">😕</span><span class="rating-label">Malo</span></label>
+						<label class="rating-option"><input type="radio" name="servicio" value="Regular"><span class="rating-emoji">😐</span><span class="rating-label">Regular</span></label>
+						<label class="rating-option"><input type="radio" name="servicio" value="Bueno"><span class="rating-emoji">🙂</span><span class="rating-label">Bueno</span></label>
+						<label class="rating-option"><input type="radio" name="servicio" value="Excelente"><span class="rating-emoji">🤩</span><span class="rating-label">¡Excelente!</span></label>
+					</div>
+				</fieldset>
+
+				<fieldset class="question-block">
+					<legend><span class="step">02</span> ¿Y qué te pareció la comida?</legend>
+					<p class="hint">Cuéntanos sobre el sabor, la frescura y la presentación.</p>
+					<div class="rating-options" role="radiogroup" aria-label="Califica la comida">
+						<label class="rating-option"><input type="radio" name="comida" value="Muy mala" required><span class="rating-emoji">🤢</span><span class="rating-label">Muy mala</span></label>
+						<label class="rating-option"><input type="radio" name="comida" value="Mala"><span class="rating-emoji">🙁</span><span class="rating-label">Mala</span></label>
+						<label class="rating-option"><input type="radio" name="comida" value="Regular"><span class="rating-emoji">😐</span><span class="rating-label">Regular</span></label>
+						<label class="rating-option"><input type="radio" name="comida" value="Rica"><span class="rating-emoji">😋</span><span class="rating-label">Rica</span></label>
+						<label class="rating-option"><input type="radio" name="comida" value="Deliciosa"><span class="rating-emoji">🤤</span><span class="rating-label">¡Deliciosa!</span></label>
+					</div>
+				</fieldset>
+
+				<fieldset class="question-block compact-question">
+					<legend><span class="step">03</span> ¿Qué fue lo que más disfrutaste?</legend>
+					<div class="choice-list">
+						<label><input type="checkbox" name="destacado" value="El sabor"><span>El sabor</span></label>
+						<label><input type="checkbox" name="destacado" value="La atención"><span>La atención</span></label>
+						<label><input type="checkbox" name="destacado" value="El precio"><span>El precio</span></label>
+						<label><input type="checkbox" name="destacado" value="La rapidez"><span>La rapidez</span></label>
+					</div>
+				</fieldset>
+
+				<div class="field-group">
+					<label for="comentario" class="field-label">¿Algo que podamos mejorar o quieras contarnos?</label>
+					<textarea id="comentario" name="comentario" rows="4" placeholder="¡Toda sugerencia es bienvenida! (opcional)"></textarea>
+				</div>
+
+				<div class="field-group name-field">
+					<label for="nombre" class="field-label">Tu nombre <span class="optional">(opcional)</span></label>
+					<input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="¿Cómo te llamas?">
+				</div>
+
+				<button class="submit-button" type="submit">Enviar mi opinión <span aria-hidden="true">→</span></button>
+				<p class="privacy-note">Gracias por ayudarnos a crecer. Tus respuestas son confidenciales.</p>
+			</form>
+
+			<div id="success-message" class="success-message" role="status" tabindex="-1" hidden>
+				<span class="success-icon" aria-hidden="true">💛</span>
+				<h2>¡Gracias por compartir!</h2>
+				<p>Leímos tu opinión con mucho cariño. ¡Esperamos verte pronto!</p>
+				<button type="button" id="again-button" class="again-button">Enviar otra respuesta</button>
+			</div>
+
+			<footer class="card-footer">HECHO CON <span aria-label="amor">♥</span> Nombre</footer>
+		</section>
+	</main>
+
+	<script>
+		const form = document.querySelector('#survey-form');
+		const successMessage = document.querySelector('#success-message');
+
+		form.addEventListener('submit', (event) => {
+    if (!form.reportValidity()) {
+        event.preventDefault();
+    }
+	});	
+
+		document.querySelector('#again-button').addEventListener('click', () => {
+			form.reset();
+			successMessage.hidden = true;
+			form.hidden = false;
+			form.querySelector('input[type="radio"]').focus();
+		});
+	</script>
+</body>
+</html>
